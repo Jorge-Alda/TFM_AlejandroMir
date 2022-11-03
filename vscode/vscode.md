@@ -66,6 +66,16 @@ Pulsa para iniciar el repositorio. Ahora podrás hacer commits en el repositorio
 
 ![Publicar repo](08.png)
 
+### Comparar cambios
+
+Si tienes algún archivo modificado respecto al último commit, puedes ver los cambios realizados haviendo doble clic en el nombre del archivo en el panel de control de cambios:
+
+![Comparar cambios](16.png)
+
+La ventana se divide en dos: en la mitad izquierda está la versión antigua, y en la mitad derecha la versión nueva. Los archivos se comparan línea a línea (y en el caso de los cuadernos de Jupyter, también se comparan los resultados de cada celda). Una línea añadida aparecerá resaltada en verde en la mitad derecha, una línea eliminada aparecerá en rojo en la mitad izquierda, y una línea modificada aparecerá en rojo a la izquierda y en verde a la derecha.
+
+También puedes ver los cambios que introdujo un commit en un archivo. Para ello, en el panel de Control de Cambios abre el desplegable de commits, selecciona el commit en concreto, y bajo él, el nombre del archivo que quieres comparar.
+
 ### Ver repositorios remotos
 
 Es posible ver desde VSCode repositorios de GitHub sin tener que clonarlos. Para ello, primero pulsa en el botón "><" que hay en la esquina inferior izquierda de la pantalla. Verás el siguiente diálogo:
