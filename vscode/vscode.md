@@ -19,6 +19,7 @@
 
 * [H5Web](https://marketplace.visualstudio.com/items?itemName=h5web.vscode-h5web)
 * [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
+* [Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 ## Usando GitHub desde VSCode
 
