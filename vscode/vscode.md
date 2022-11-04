@@ -6,6 +6,7 @@
 * [Entornos virtuales](venv.md)
 * [Sesiones colaborativas](liveshare.md)
 * [Debug](debug.md)
+* [Tests](tests.md)
 
 ## Extensiones recomendadas
 
