@@ -63,3 +63,9 @@ Durante el breakpoint aparece una barra de herramientas flotante, inicialmente a
 * El tercer botón va, si es posible, a la siguiente línea en un nivel más profundo de la lista de llamadas, (es decir, entra dentro de una función) y vuelve a detener la ejecución.
 * El cuarto botón va a la siguiente línea en un nivel menos profundo de la lista de llamadas, y vuelve a detener la ejecución.
 * El último botón desconecta el debugger. El programa se seguirá ejecutando normalmente hasta que acabe.
+
+## Cuadernos de Jupyter
+
+También se puede usar el debugger con cuadernos de Jupyter. Para situar un breakpoint, pulsa en el margen interior de la celda. Para empezar la ejecución en modo debug, abre el deplegable que hay al lado de la celda, junto al botón Run, y pulsa Debug.
+
+![Cuaderno de jupyter](27.png)
