@@ -4,6 +4,7 @@
 
 * [Usando GitHub](github.md)
 * [Entornos virtuales](venv.md)
+* [Sesiones colaborativas](liveshare.md)
 
 ## Extensiones recomendadas
 
