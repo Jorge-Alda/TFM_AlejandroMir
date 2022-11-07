@@ -7,6 +7,7 @@
 * [Sesiones colaborativas](liveshare.md)
 * [Debug](debug.md)
 * [Tests](tests.md)
+* [Anotaciones de tipos y docstrings](annotations.md)
 
 ## Extensiones recomendadas
 
