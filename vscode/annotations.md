@@ -119,6 +119,12 @@ def saludo(nombre: Optional[str] = None):
         print(f"¡Hola, {nombre}!")
 ```
 
+Las anotaciones de un objeto se pueden ver en tiempo de ejecución usando
+
+```Python
+saludo.__annotations__
+```
+
 ### Anotaciones en VSCode
 
 ![Anotaciones en VSCode](32.png)
@@ -132,3 +138,49 @@ Por defecto, VSCode no comprueba que los tipos sean correctos. Esto se puede cam
 Puedes ver toda la lista de errores en el examinador de problemas (Ctrl+Shift+M)
 
 ![Problemas](34.png)
+
+## Doctrings
+
+Los doctrings son un tipo de comentario que sirve para documentar el uso de funciones, clases o módulos. Un docstring se escribe con un string delimitado por comillas triples (string multilínea) situado justo al inicio del objeto que se quiere documentar. La primera línea debe ser una descripción breve de la continuación. A continuación se deja una línea en blanco, y después una explicación más detallada. Por ejemplo, en una función se explican los argumentos, excepciones y valores devueltos.
+
+```Python
+import flavio
+from wilson import Wilson
+
+def RK_NP(w: Wilson) -> float:
+    """Calcula el valor del ratio RK en una teoría efectiva.
+
+    Argumentos
+    ----------
+    w: Wilson
+        Coeficientes de Wilson de la teoría efectiva
+
+    Devuelve
+    --------
+    float
+        Valor de RK en el bin [1.1, 6.0] GeV^2
+
+    Ejemplo
+    -------
+    >>> w = Wilson({}, scale=1000, eft='SMEFT', basis='Warsaw')
+    >>> R = RK_NP(w)
+    R = 1.0007790786808297
+    """
+    return flavio.np_prediction('<Rmue>(B+->Kll)', w, 1.1, 6.0)
+```
+
+Se puede ver el doctring en tiempo de ejecución usando
+
+```Python
+help(RK_NP)
+```
+
+### Docstrings en VSCode
+
+![Docstrings](35.png)
+
+Al pasar el cursor sobre una función, clase o módulo se ve su docstring. Cualquier línea que vaya seguida de una línea de `======` se formatea como un título principal, y si va seguida de una línea de `-----`, como un título secundario. Las líneas que empiezan por `*` se formatean como una lista de viñetas, y las que empiezan por `>>>` como código en Python.
+
+La extensión `autoDocstrings` para VSCode permite crear esbozos de docstrings, con tan solo escribir `"""` tras el encabezado de una función o clase. La extensión extrae automáticamente los argumentos y sus tipos (si están anotados).
+
+Puedes configurar la extensión para que el formato usado coincida con el del ejemplo anterior, y los títulos tengan formato. Para ello abre la pantalla de configuración (Ctrl+,) y en la barra de búsqueda escribe autoDocstring. En el desplegable para elegir el formato, elige `numpy`.
