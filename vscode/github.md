@@ -20,7 +20,15 @@ Pulsando en el botón rodeado, se abre el panel de control de cambios.
 
 ![Panel de control de cambios](04.png)
 
-En el apartado desplegable de Control de Cambios verás los archivos modificados que están en la fase de stage y los que no están (los archivos listados en `.gitignore` no aparecerán aquí). Para añadir un archivo a la fase de stage, pulsa el signo + que aparece al pasar el cursor por encima, y para retirarlo de la fase de stage, pulsa el signo -. Cuando tengas todos los cambios listos en la fase de stage, escribe el mensaje del commit y pulsa el botón con el tick. Esto crea un commit en tu repositorio local, pero todavía no lo ha sincronizado con el repositorio remoto (GitHub).
+En el apartado desplegable de Control de Cambios verás los archivos modificados que están en la fase de stage y los que no están (los archivos listados en `.gitignore` no aparecerán aquí). Para añadir un archivo a la fase de stage, pulsa el signo + que aparece al pasar el cursor por encima, y para retirarlo de la fase de stage, pulsa el signo -. A la izquierda de los archivos, aparecen unas letras:
+
+* **U:** *Untracked*. El archivo no ha sido incluído todavía en el registro de cambios de git.
+* **A:** *Added*. El archivo se va a añadir al registro de cambios de git.
+* **M:** *Modified*. El archivo tiene cambios con respecto a la última versión.
+* **R:** *Renamed*. Se va a cambiar el nombre del archivo.
+* **D:** *Deleted*. Se va a eliminar el archivo.
+
+Cuando tengas todos los cambios listos en la fase de stage, escribe el mensaje del commit y pulsa el botón con el tick. Esto crea un commit en tu repositorio local, pero todavía no lo ha sincronizado con el repositorio remoto (GitHub).
 
 En el desplegable de Commits, puedes ver qué archivos se han creado, modificado o eliminado en cada commit, así como el autor y la fecha. En la parte superior hay varios botones con forma de flecha:
 
