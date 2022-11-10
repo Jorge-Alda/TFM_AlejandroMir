@@ -8,6 +8,7 @@
 * [Debug](debug.md)
 * [Tests](tests.md)
 * [Anotaciones de tipos y docstrings](annotations.md)
+* [Gestión de paquetes de Python](paquetes.md)
 
 ## Extensiones recomendadas
 
