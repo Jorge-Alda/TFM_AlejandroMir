@@ -2,6 +2,9 @@
 
 ## Teoría
 
+* [hep-ph/9806303](https://arxiv.org/abs/hep-ph/9806303): Curso de Teorías Efectivas, A. Pich. (Hasta el capítulo 3).
+* [1804.05863](https://arxiv.org/abs/1804.05863): Curso de Teorías Efectivas, A. Manohar.
+* [1901.06573](https://arxiv.org/abs/1901.06573): Curso sobre Renormalización y aplicación a Teorías Efectivas, M. Neubert.
 * [1008.4884](https://arxiv.org/abs/1008.4884): Definición de la base Warsaw del SMEFT.
 
 ## Experimentos y predicciones
