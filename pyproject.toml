@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tfm-alejandromir"
+version = "0.1.0"
+description = "Material adicional para el TFM de Alejandro Mir"
+authors = ["Jorge Alda, Siannah Penaranda, Alejandro Mir"]
+readme = "README.md"
+packages = [{include = "tfm_alejandromir"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flavio = "^2.3.3"
+wilson = "^2.3.2"
+ipykernel = "^6.17.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

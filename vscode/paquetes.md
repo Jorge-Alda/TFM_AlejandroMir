@@ -39,3 +39,46 @@ Se puede automatizar el proceso de instalación, y asegurarse de que todos los p
 ```bash
 pip install -r requirements.txt
 ```
+
+## Gestión de paquetes y entornos virtuales con poetry
+
+`poetry` es una herramienta que automáticamente crea un entorno virtual y gestiona los paquetes que se instalan en él. Puedes obtener `poetry` [aquí](https://python-poetry.org/docs/)
+
+Para empezar a usarlo, abre la terminal en python en la carpeta del proyecto, y ejecuta
+
+```bash
+poetry init
+```
+
+El programa te irá preguntando datos del programa. Cuando te pregunte si quieres definir las dependencias, di que no. Esto crea un archivo llamado `pyproject.toml` que contiene los metadatos y la información necesaria para instalar tu paquete. A continuación, para crear el entorno virtual, usa el comando
+
+```bash
+poetry shell
+```
+
+Recuerda seleccionar el entorno como predeterminado para el proyecto, y crear un kernel de Jupyter si es necesario, como se explicó [aquí](venv.md).
+
+Cuando quieras añadir un paquete, usa el comando
+
+```bash
+poetry add flavio
+poetry install
+```
+
+El comando `poetry add` simplemente marca el paquete para instalar, es necesario hacer `poetry install` después. La forma de especificar las versiones es igual que en `pip`. Sin embargo, para instalar desde `git` hay pequeñas diferencias:
+
+```bash
+poetry add git+https://github.com/flav-io/flavio.git
+poetry install
+```
+
+y para instalar desde una rama,
+
+```bash
+poetry add git+https://github.com/flav-io/flavio.git#lhcb-measurements
+poetry install
+```
+
+Además de instalar las dependencias, estos comandos modifican el archivo `pyproject.toml` y crean un archivo `poetry.lock` en el que se detallan las versiones exactas de los paquetes instalados y de sus dependencias.
+
+Una vez especificadas todas las dependencias con `poetry`, y subidos los archivos `pyproject.toml` y `poetry.lock`, cualquiera puede instalar el paquete que has creado usando `pip` en el modo `git+...`.
