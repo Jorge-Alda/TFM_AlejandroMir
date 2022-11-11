@@ -82,3 +82,58 @@ poetry install
 Además de instalar las dependencias, estos comandos modifican el archivo `pyproject.toml` y crean un archivo `poetry.lock` en el que se detallan las versiones exactas de los paquetes instalados y de sus dependencias.
 
 Una vez especificadas todas las dependencias con `poetry`, y subidos los archivos `pyproject.toml` y `poetry.lock`, cualquiera puede instalar el paquete que has creado usando `pip` en el modo `git+...`.
+
+## Estructura del proyecto
+
+Un paquete de Python se estructura en módulos (y sub-módulos, sub-sub-módulos, etc). Por ejemplo, si queremos usar la función de `flavio` para calcular el nivel de confianza correspondiente a un número de sigmas,
+
+```python
+import flavio
+cl = flavio.statistics.functions.confidence_level(2.3)
+```
+
+estamos usando la función `confidence_level()` definida en el archivo `functions.py` del módulo `statistics` de `flavio`. Puedes ver los contenidos de un paquete, módulo o sub-módulo, con la función `dir()`
+
+```python
+dir(flavio.statistics.functions)
+```
+
+Cada módulo se corresponde con una carpeta (sub-módulos con sub-carpetas) que contenga un archivo llamado `__init__.py`. El cometido de este archivo es importar todas las clases y funciones que aparecerán en `dir()`, y albergar el [docstring](annotations.md#doctrings) del módulo. En el caso de `flavio`, por ejemplo, tenemos la siguiente estructura:
+
+```
+flavio/
+  |- statistics/
+  |   |- probability.py
+  |   |- functions.py
+  |   |- __init__.py
+  |- __init__.py
+```
+
+En el archivo `flavio/statistics/functions.py` hay algo similar a esto:
+
+```python
+def confidence_level(nsigma):
+    r"""Return the confidence level corresponding to a number of sigmas,
+    i.e. the probability contained in the normal distribution between $-n\sigma$
+    and $+n\sigma$.
+    Example: `confidence_level(1)` returns approximately 0.68."""
+    ...
+
+def delta_chi2(nsigma, dof):
+    ...
+```
+
+mientras que en el archivo `flavio/statistics/__init__.py` están los imports de los archivos,
+
+```python
+"""Module containing everything needed for statistical analyses, fitting, etc."""
+
+from . import probability
+from . import functions
+```
+
+El `.` en el import hace referencia a la carpeta en la que se encuentra `__init__.py`. Por su parte, también es necesario importar el módulo `statistics`, desde el archivo `flavio/__init__.py`:
+
+```python
+from . import statistics
+```
