@@ -75,14 +75,18 @@ Una vez abierto, podrás examinar el repositorio como cualquier otra carpeta en 
 
 ![Ver repo remoto](11.png)
 
-Alternativamente, puedes abrir un repositorio remoto de GitHub en cualquier ordenador, aunque no tenga VSCode instalado.Abre la página del repositorio en tu navegador web, y en la dirección cambia `github.com` por `github.dev`, o simplemente pulsa la tecla `.` del teclado, y se abrirá la versión web de VSCode.
+Alternativamente, puedes abrir un repositorio remoto de GitHub en cualquier ordenador, aunque no tenga VSCode instalado. Abre la página del repositorio en tu navegador web, y en la dirección cambia `github.com` por `github.dev`, o simplemente pulsa la tecla `.` del teclado, y se abrirá la versión web de VSCode.
 
 Tanto la versión de VSCode como la versión web de un repositorio remoto permiten guardar los cambios localmente antes de sincronizar. Para sincronizar los cambios, usa el panel de cambios del mismo modo que en un repositorio normal. La única diferencia es que cada vez que se hace un commit, automáticamente se hace también un push.
+
+Para añadir archivos desde to ordenador al repositorio, hay que abrir el explorador en el panel lateral (primera pestaña), hacer click derecho en la ubicación en la que se va a añadir, y seleccionar `Upload...`. Si estás trabajando desde la versión instalada de VSCode, también se pueden añadir archivos arrastrándolos desde su carpeta (en la versión web esto no funciona, al menos en Firefox+Linux).
 
 ## Codespaces
 
 Un repositorio remoto tiene la desventaja de que algunas funciones están desactivadas, entre ellas la posibilidad de ejecutar el código (en la versión web). Codespaces permite superar estas limitaciones: se trata de un contenedor (es decir, un "mini sistema operativo", en este caso un Ubuntu 20.04 sin entorno gráfico) disponible "en la nube".
 
-Para crear un codespace, abre la página de GitHub del repositorio y pulsa el botón verde "Code". En la segunda pestaña puedes ver si hay algún codespace ya creado para el proyecto, o crear uno nuevo. El contenedor se crea inicialmente con VSCode, python, el contenido del repositorio, y sus dependencias (si están especificadas en un archivo `requirements.txt`, de `poetry`, etc.). A continuación puedes abrir el codespace, ya sea en la versión web o en VSCode si lo tienes instalado en tu ordenador. En un proyecto colaborativo, todos los miembros tienen acceso a los mismos codespaces, así que es como si trabajaran en el mismo ordenador.
+![neofetch en un codespace](36.png)
 
-Nota: en las cuentas gratuitas de GitHub, solo hay disponibles 60h mensuales de Codespaces.
+Para crear un codespace, abre la página de GitHub del repositorio y pulsa el botón verde "Code". En la segunda pestaña puedes ver si hay algún codespace ya creado para el proyecto, o crear uno nuevo. El contenedor se crea inicialmente con VSCode, python, el contenido del repositorio, y sus dependencias (si están especificadas en un archivo `requirements.txt`). A continuación puedes abrir el codespace, ya sea en la versión web o en VSCode si lo tienes instalado en tu ordenador. En un proyecto colaborativo, todos los miembros tienen acceso a los mismos codespaces, así que es como si trabajaran en el mismo ordenador. Cualquier programa que ejecutes estará corriendo en un servidor de la nube, no en tu propio ordenador.
+
+Nota: en las cuentas gratuitas de GitHub, solo hay disponibles 60h mensuales de Codespaces. Para parar un codespace, pulsa en el botón de la parte inferior izquierda `>< Codespaces`, y selecciona la opción de detener el codespace. También puedes abrir el panel lateral del explorador de conexiones remotas y pararlo pulsando el botón cuadrado que hay junto al nombre del codespace.
