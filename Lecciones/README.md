@@ -1,4 +1,8 @@
 # Lecciones
 
 * [Lección 1](01.ipynb): Flavio y Wilson para hacer predicciones en el SM y SMEFT.
-* [Lección 2](02.ipynb): Clases en Python.
+* Lección 2: Conceptos de Python:
+  * [Lección 2a](02.ipynb): Clases.
+  * [Lección 2b](02b.ipynb): Excepciones, errores y gestores de contexto.
+  * [Lección 2c](02c.ipynb): Iteradores, generadores, lamndas.
+  * [Lección 2d](02d.ipynb): Emparejamiento.
