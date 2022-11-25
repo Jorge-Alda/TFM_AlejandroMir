@@ -4,5 +4,6 @@
 * Lección 2: Conceptos de Python:
   * [Lección 2a](02.ipynb): Clases.
   * [Lección 2b](02b.ipynb): Excepciones, errores y gestores de contexto.
-  * [Lección 2c](02c.ipynb): Iteradores, generadores, lamndas.
+  * [Lección 2c](02c.ipynb): Iteradores, generadores, lambdas.
   * [Lección 2d](02d.ipynb): Emparejamiento.
+  * [Lección 2e](02e.ipynb): Paralelismo
