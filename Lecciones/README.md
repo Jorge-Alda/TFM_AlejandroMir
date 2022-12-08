@@ -6,4 +6,5 @@
   * [Lección 2b](02b.ipynb): Excepciones, errores y gestores de contexto.
   * [Lección 2c](02c.ipynb): Iteradores, generadores, lambdas.
   * [Lección 2d](02d.ipynb): Emparejamiento.
-  * [Lección 2e](02e.ipynb): Paralelismo
+  * [Lección 2e](02e.ipynb): Paralelismo.
+  * [Lección 2f](02f.ipynb): Argumentos de funciones.
