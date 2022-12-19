@@ -8,3 +8,4 @@
   * [Lección 2d](02d.ipynb): Emparejamiento.
   * [Lección 2e](02e.ipynb): Paralelismo.
   * [Lección 2f](02f.ipynb): Argumentos de funciones.
+  * [Lección 2g](02g.ipynb): Co-rutinas.
