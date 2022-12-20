@@ -13,6 +13,7 @@
 
 * [1705.05802](https://arxiv.org/abs/1705.05802): $R_{K^{*0}}$ en los bins [0.045, 1.1] GeV^2 y [1.1, 6.0] GeV^2.
 * [2103.11769](https://arxiv.org/abs/2103.11769): $R_{K^+}$ en el bin [1.1, 6.0] GeV^2.
+* [2212.09152](https://arxiv.org/abs/2212.09152) & [2212.09153](https://arxiv.org/abs/2212.09153): Sustituyen los dos resultados anteriores.
 * [2110.09501](https://arxiv.org/abs/2110.09501): $R_{K_S^0}$ y $R_{K^{*+}}$.
 
 ### RD
