@@ -245,7 +245,7 @@ test = ["boost-histogram", "coverage", "cython", "ipywidgets", "jacobi", "joblib
 
 [[package]]
 name = "ipykernel"
-version = "6.19.2"
+version = "6.19.4"
 description = "IPython Kernel for Jupyter"
 category = "main"
 optional = false
@@ -268,9 +268,7 @@ traitlets = ">=5.4.0"
 [package.extras]
 cov = ["coverage[toml]", "curio", "matplotlib", "pytest-cov", "trio"]
 docs = ["myst-parser", "pydata-sphinx-theme", "sphinx", "sphinxcontrib-github-alt"]
-lint = ["black (>=22.6.0)", "mdformat (>0.7)", "ruff (>=0.0.156)"]
 test = ["flaky", "ipyparallel", "pre-commit", "pytest (>=7.0)", "pytest-asyncio", "pytest-cov", "pytest-timeout"]
-typing = ["mypy (>=0.990)"]
 
 [[package]]
 name = "ipython"
@@ -812,7 +810,7 @@ testing = ["nose"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "47098b0e793046fa9f0b8a6b7243d072a01c21a466d5a569554bf48f179156c4"
+content-hash = "65864956c1a05849d70deaa6f6914240ad4233c122bf1615583545fb480cab56"
 
 [metadata.files]
 appnope = [
@@ -1086,8 +1084,8 @@ iminuit = [
     {file = "iminuit-2.18.0.tar.gz", hash = "sha256:7ee2c6a0bcdac581b38fae8d0f343fdee55f91f1f6a6cc9643fcfbcc6c2dc3e6"},
 ]
 ipykernel = [
-    {file = "ipykernel-6.19.2-py3-none-any.whl", hash = "sha256:1374a55c57ca7a7286c3d8b15799cd76e1a2381b6b1fea99c494b955988926b6"},
-    {file = "ipykernel-6.19.2.tar.gz", hash = "sha256:1ab68d3d3654196266baa93990055413e167263ffbe4cfe834f871bcd3d3506d"},
+    {file = "ipykernel-6.19.4-py3-none-any.whl", hash = "sha256:0ecdae0060da61c5222ad221681f3b99b5bef739e11a3b1eb5778aa47f056f1f"},
+    {file = "ipykernel-6.19.4.tar.gz", hash = "sha256:4140c282a6c71cdde59abe5eae2c71bf1eeb4a69316ab76e1c4c25150a49722b"},
 ]
 ipython = [
     {file = "ipython-8.6.0-py3-none-any.whl", hash = "sha256:91ef03016bcf72dd17190f863476e7c799c6126ec7e8be97719d1bc9a78a59a4"},
@@ -1579,6 +1577,14 @@ rundec = [
     {file = "rundec-0.5.2-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:ddd5a44322e04be20498abd2338b5701fd3fd7b741f21f66b1e8a274c9be8535"},
     {file = "rundec-0.5.2-cp310-cp310-win32.whl", hash = "sha256:4a8e6a3e21d40fd90e511945ffc3111913e708e49c2f5b413af9222b3d12cd09"},
     {file = "rundec-0.5.2-cp310-cp310-win_amd64.whl", hash = "sha256:1eea66eaa9f5644045ba860fd2a7dff52a8b75b6294eaa60d4bc153f0016655a"},
+    {file = "rundec-0.5.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:01f214d9b14c54d86f227e4acc289ce456e96bce627f879d085be95f5960d3d8"},
+    {file = "rundec-0.5.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:c24de36bf9e6e39afb455de69be7a7051525881d3607f72b039aaeb7334225d5"},
+    {file = "rundec-0.5.2-cp311-cp311-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:f74dc8c8d456df009a3601fafd51e3276d38994efaa8fb29340f1aaca0d02fe3"},
+    {file = "rundec-0.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:959f3d09c4224264a328e50527d6aef1e8aca6d402535842a2a9054c54ddcd69"},
+    {file = "rundec-0.5.2-cp311-cp311-musllinux_1_1_i686.whl", hash = "sha256:3c077c3c1ac0be88b70f552597d5e63df9ab4eae9bd03a31b19f9fb13d7e12b1"},
+    {file = "rundec-0.5.2-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:48bf49929e330c4b50be1d3cb1530c04603701b5835a1220ff4f7b47c5aecf0e"},
+    {file = "rundec-0.5.2-cp311-cp311-win32.whl", hash = "sha256:1049b9a341e9348ef5963c5eee9e14cbf9f01632ffdc5295ddc5c2dbb7d66e1d"},
+    {file = "rundec-0.5.2-cp311-cp311-win_amd64.whl", hash = "sha256:9ca7fa280b482bfb9404b5300cdf73de78b53078100a0e37d7843fc149b72516"},
     {file = "rundec-0.5.2-cp35-cp35m-macosx_10_6_intel.whl", hash = "sha256:675032e6955d7d6634e99fb9fbb5bf9cc7e389a03d7afbe7a6f110ef8872e40e"},
     {file = "rundec-0.5.2-cp35-cp35m-macosx_10_9_x86_64.whl", hash = "sha256:6368fe86d916a5a6085b3aa077fa6250bf4cc828c8f35457ecf8d0f85ec1b630"},
     {file = "rundec-0.5.2-cp35-cp35m-manylinux2010_i686.whl", hash = "sha256:4a8411b16bd4bd76e4eff6dc34970550da2177e4453a4e1ffc0e4f5ddd165aeb"},
