@@ -12,6 +12,8 @@ flavio = "^2.3.3"
 wilson = "^2.3.2"
 ipykernel = "^6.19.2"
 h5py = "^3.7.0"
+iminuit = "^2.18.0"
+matplotlib = "^3.6.2"
 
 
 [tool.poetry.group.dev.dependencies]
