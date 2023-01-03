@@ -47,10 +47,10 @@ pip install -r requirements.txt
 Para empezar a usarlo, abre la terminal en python en la carpeta del proyecto, y ejecuta
 
 ```bash
-poetry init
+poetry new nombre-del-proyecto
 ```
 
-El programa te irá preguntando datos del programa. Cuando te pregunte si quieres definir las dependencias, di que no. Esto crea un archivo llamado `pyproject.toml` que contiene los metadatos y la información necesaria para instalar tu paquete. A continuación, para crear el entorno virtual, usa el comando
+El programa te irá preguntando datos del programa. Cuando te pregunte si quieres definir las dependencias, di que no. Esto crea un archivo llamado `pyproject.toml` que contiene los metadatos y la información necesaria para instalar tu paquete, y una estructura de directorios como la que se explica a continuación. A continuación, para crear el entorno virtual, usa el comando
 
 ```bash
 poetry shell
