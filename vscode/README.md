@@ -9,6 +9,7 @@
 * [Tests](tests.md)
 * [Anotaciones de tipos y docstrings](annotations.md)
 * [Gestión de paquetes de Python](paquetes.md)
+* [Docker y desarrollo en contenedores](docker.md)
 
 ## Extensiones recomendadas
 

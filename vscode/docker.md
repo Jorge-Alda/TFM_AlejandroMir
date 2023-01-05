@@ -219,9 +219,11 @@ Asegúrate de tener instalada la [extensión de desarrollo remoto](https://marke
 Tardará un poco en crear el contenedor. Una vez que esté listo, verás que en la esquina imferior izquierda aparece junto a `><` el contenedor de desarrollo. Además, se abrá creado una carpeta llamada `.devcontainer` con un archivo `devcontainer.json`. Es importante que sincronices este archivo en GitHub, y así cualquiera que clone el proyecto tendrá acceso al mismo contenedor. De hecho, cada vez que abras en VSCode un proyecto con un archivo `devcontainer.json`, aparecerá un cuadro de diálogo sugiriendo conectar con el contenedor.
 
 Sal del contenedor pulsando el botón `><` de la esquina inferior izquierda y selecciona cerrar conexión remota. Abre el archivo `devcontainer.json` y des-comenta la siguiente línea
+
 ```json
     "remoteUser": "root",
 ```
+
 y posiblemente tengas que añadir una coma en la última línea no comentada. Vuelve a reabrir en el contenedor, y acepta la opción para reconstruirlo.
 
 A diferencia de WSL, los contenedores son desechables, así que cualquier cambio que realices no se conservará la próxima vez que reconstruyas el contenedor. La única excepción es el directorio `/workspaces`, que contiene el proyecto actual, y que está sincronizado con el directorio de tu sistema de archivos. Cualquier cambio permanente que quieras hacer hay que especificarlo en `devcontainer.json` o en la imagen de Docker que se usa com base. El contenedor ya tiene instalado `python`, `pip`, `git`, `jupyter` y `poetry`, así como varias extensiones de VSCode.
@@ -229,8 +231,71 @@ A diferencia de WSL, los contenedores son desechables, así que cualquier cambio
 Abre el panel de extensiones de VSCode. Verás que hay algunas que están instaladas en Local (es decir, en tu sistema operativo), y otras en el contenedor de desarrollo. En la sección de Local, puede que algunas extensiones estén desactivadas. Si ves alguna que te interese usar en el contenedor, pulsa con el botón derecho del ratón, y selecciona Añadir a `devcontainer.json`. Cuando las tengas todas listas, sal del contenedor y vuelve a entrar para reconstruirlo.
 
 En `devcontainer.json` también se pueden especificar comandos que se ejecutan al reconstruir el contenedor. Vamos a añadir un comando que instale los paquetes registrados en `poetry`. Para ello, después de `"remoteUser": "root",` añade la siguiente línea:
+
 ```json
     "postCreateCommand": "cd /workspaces/nombre-del-proyecto && poetry run poetry install",
 ```
 
 Reconstruye una vez más el contenedor, y verás cómo se instalan los paquetes. Cuando acabe la instalación, comprueba que ha funcionado correctamente usando el comando `poetry run pip list`. Ya está todo listo para sincronizar `devcontainer.json` con GitHub y trabajar dentro del contenedor.
+
+## Crear imágenes de Docker
+
+Cuando ya tengas listo el proyecto para preservarlo, o al menos una versión inicial, podemos preparar un contenedor de Docker. Empieza creando un archivo llamado `Dockerfile`, sin extensión, en la carpeta del proyecto. Este archivo contiene las instrucciones para construir la imagen.
+
+El primer pasó será indicar una imagen base sobre la que añadiremos nuestros contenidos. Puedes encontrar un repositorio de imágenes en [Docker Hub](https://hub.docker.com), aunque necesitarás crear una cuenta para verlas. Vamos a escoger la imagen de Python 3.10 optimizada para tener un tamaño reducido. Para ello escribe la siguiente línea en el archivo `Dockerfile`:
+
+```Dockerfile
+FROM python:3.10-slim
+```
+
+El siguiente paso es especificar el directorio en el que vamos a trabajar, en nuestro caso `/app`. Añade la siguiente línea:
+
+```Dockerfile
+WORKDIR /app
+```
+
+A continuación copiamos los archivos de nuestro proyecto a la imagen. Con el comando `COPY`se pueden copiar archivos individuales o directorios completos. Como vamos a copiar todo el directorio local al directorio de trabajo del contenedor, podemos usar simplemente `.` como origen y destino:
+
+```Dockerfile
+COPY . .
+```
+
+Es posible seleccionar archivos para ignorar al copiar. Para ello, crea un archivo `.dockerignore`, que funciona del mismo modo que `.gitignore` de `git`: escribe cada archivo o directorio a ignorar en una línea.
+
+Por último, tendremos que instalar nuestro paquete de python y sus dependencias. Lo haremos con `pip`, que ya está instalado en la imagen base, y que es capaz de leer el archivo `pyproject.toml`. Para ejecutar cualquier comando de linux, se usa la palabra `RUN`. En nuestro caso:
+
+```Dockerfile
+RUN pip install .
+```
+
+Ahora que ya tenemos listo el `Dockerfile`, podemos construir la imagen ejecutando
+
+```bash
+docker build -t nombre-de-usuario/nombre-de-la-imagen .
+```
+
+donde `nombre-de-usuario` es tu nombre de usuario en Docker Hub. Opcionalmente puedes incluir un número de versión con
+
+```bash
+docker build -t nombre-de-usuario/nombre-de-la-imagen:v0.1.0 .
+```
+
+`docker` lo primero que hará es descargar la imagen base si no la tienes en tu ordenador. Después copia los archivos y realiza la instalación. Cada comando que modifica la imagen (`FROM`, `COPY`, `RUN`,...) constituye una capa. Las siguientes veces que construyas la imagen, `docker` solo modifica cada capa si ha cambiado ella o alguna de sus predecesoras. Con cada capa se crea una caché del estado de la imagen, así que para obtener imágenes de menor tamaño es recomendable usar pocas capas, por ejemplo uniendo varias instrucciones `RUN` en una única en la que se concatenen los comandos con `&&`.
+
+Opcionalmente, se pueden crear imágenes con menos capas (y sin los archivos intermedios, como el contenido del directorio `/app`) usando un `Dockerfile` en varias etapas: en la primera etapa se copian los archivos del proyecto y se instalan (en `/usr/local/lib/python3.10/site-packages/`), y en la segunda etapa simplemente se copian los paquetes ya instalados desde la primera etapa:
+
+```Dockerfile
+FROM python:3.10-slim AS temp
+WORKDIR /app
+COPY . .
+RUN pip install .
+
+FROM python:3.10-slim
+COPY --from=temp /usr/local/lib/python3.10/site-packages/ /usr/local/lib/python3.10/site-packages/
+```
+
+Abre la aplicación de `Docker Desktop`. En la sección de Imágenes debería salir la imagen que acabas de crear. Pulsa en el botón azul "Run" que aparece en la parte derecha de la imagen. En el cuadro de diálogo que se abre, si quieres puedes escribir un nombre identificativo para el contenedor, y deja el resto de opciones en blanco. EL programa te llevará a la sección de contenedores, y deberías ver el ccontenedor recién creado con un icono en verde. Pulsa el primer botón que aparece a su derecha, con el icono `>_`. Al pulsarlo se abrirá un terminal dentro del contenedor. Ejecuta Python y prueba a importar el paquete del proyecto para comprobar que todo funciona correctamente. Cuando hayas acabado de usar el contenedor, ciérralo y elimínalo.
+
+Si quieres usar archivos locales (por ejemplo, scripts de python o algún tipo de input) y/o guardar los outputs producidos dentro del contenedor, tendrás que usar un volumen. Para ello, vuelve a dar al botón Run en la imagen, y ahora rellena la información del volumen. En la ruta del host, al pulsar sobre el botón con `...` se abrirá un cuadro de diálogo para seleccionar el directorio local de tu ordenador que se va a sincronizar con el contenedor. En la ruta del contenedor, elige dónde se van a guardar los archivos dentro del contenedor, típicamente en `/app`. Abre de nuevo la terminal, haz `cd` al directorio que hayas elegido, y allí haz `ls`para ver que tienes los archivos del volumen.
+
+Cuando hayas comprobado que todo funciona correctamente, ya puedes subir la imagen a Docker Hub. Asegúrate de que has introducido tu cuenta en Docker Desktop, y pulsa en el botón con tres puntos que aparece junto a la imagen para subirla. Comprueba en Docker Hub que la imagen ha sido subida. Ahora cualquiera puede descargarla y ejecutar tu proyecto en las mismas condiciones.
