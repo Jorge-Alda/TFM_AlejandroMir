@@ -9,3 +9,6 @@
   * [Lección 2e](02e.ipynb): Paralelismo.
   * [Lección 2f](02f.ipynb): Argumentos de funciones.
   * [Lección 2g](02g.ipynb): Co-rutinas.
+  * [Lección 2h](02h.ipynb): Rutas de archivos.
+* [Lección 3](03.ipynb): Test de hipótesis y optimización.
+* [Lección 4](04.ipynb): Medidas experimentales en `flavio`.
