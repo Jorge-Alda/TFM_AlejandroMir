@@ -368,18 +368,19 @@ tests = ["asttokens", "littleutils", "pytest", "rich"]
 
 [[package]]
 name = "flavio"
-version = "2.3.3"
+version = "2.4.0"
 description = "A Python package for flavour physics phenomenology in the Standard Model and beyond"
 category = "main"
 optional = false
 python-versions = "*"
 files = [
-    {file = "flavio-2.3.3.tar.gz", hash = "sha256:ab47aeac6c2e1edbd289a50d7392d010f32a1b6ec1f6801237f3e1ba86951852"},
+    {file = "flavio-2.4.0-py3-none-any.whl", hash = "sha256:1c9bb559e0623aad47f10aa8a14dd1d655490d747e67088581544447b1ba3560"},
+    {file = "flavio-2.4.0.tar.gz", hash = "sha256:2a9fc0c31c68a5d83360dde8dc440fde894145c8a410f4d74efbd850dda0cba2"},
 ]
 
 [package.dependencies]
 ckmutil = "*"
-numpy = ">=1.16.5"
+numpy = ">=1.20.0"
 particle = ">=0.16.0"
 pyyaml = "*"
 scipy = "*"
@@ -1679,4 +1680,4 @@ testing = ["nose"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "d3d287362e5d5901c7ee96c783aa9f69cdf3ca59d099820716b04babc71db89c"
+content-hash = "16fb00669607cbe75e1c8c9654ae563ccae684772db344c1c69bb24ce213e48c"
