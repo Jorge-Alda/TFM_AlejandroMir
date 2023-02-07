@@ -17,7 +17,7 @@ matplotlib = "^3.6.3"
 
 
 [tool.poetry.group.dev.dependencies]
-autopep8 = "^2.0.0"
+autopep8 = "^2.0.1"
 
 [build-system]
 requires = ["poetry-core"]
