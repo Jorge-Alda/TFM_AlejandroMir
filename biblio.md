@@ -6,6 +6,7 @@
 * [1804.05863](https://arxiv.org/abs/1804.05863): Curso de Teorías Efectivas, A. Manohar.
 * [1901.06573](https://arxiv.org/abs/1901.06573): Curso sobre Renormalización y aplicación a Teorías Efectivas, M. Neubert.
 * [1008.4884](https://arxiv.org/abs/1008.4884): Definición de la base Warsaw del SMEFT.
+* [1308.2627](https://arxiv.org/abs/1308.2627), [1310.4838](https://arxiv.org/abs/1310.4838), [1312.2014](https://arxiv.org/abs/1312.2014): Renormalización del SMEFT.
 
 ## Experimentos y predicciones
 

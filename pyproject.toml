@@ -10,12 +10,14 @@ packages = [{include = "tfm_alejandromir"}]
 python = "^3.10"
 flavio = "^2.3.3"
 wilson = "^2.3.2"
-ipykernel = "^6.19.2"
-h5py = "^3.7.0"
+ipykernel = "^6.21.1"
+h5py = "^3.8.0"
+iminuit = "^2.18.0"
+matplotlib = "^3.6.3"
 
 
 [tool.poetry.group.dev.dependencies]
-autopep8 = "^2.0.0"
+autopep8 = "^2.0.1"
 
 [build-system]
 requires = ["poetry-core"]
