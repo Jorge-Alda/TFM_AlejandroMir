@@ -473,37 +473,33 @@ test = ["pytest (>=6)", "pytest-cov (>=2.8.0)"]
 
 [[package]]
 name = "iminuit"
-version = "2.19.0"
+version = "2.20.0"
 description = "Jupyter-friendly Python frontend for MINUIT2 in C++"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "iminuit-2.19.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:06a169710edf70209fd8957230a3b1efe4199a8e1f0cbe927ce229f2b6db2c74"},
-    {file = "iminuit-2.19.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:022187f169b20fb1d2a23102f3ddfba349e88a9dcdf26c4c2c7196f4df116c63"},
-    {file = "iminuit-2.19.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d9d832bee9385056df72c8ef42583566193da4e6d36aa8afe18aee7a6b6eb470"},
-    {file = "iminuit-2.19.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6b97dc63396990bc6cf09ce7c94f952793a86e9dceb9b5c3b4c93dfe031b436c"},
-    {file = "iminuit-2.19.0-cp310-cp310-win_amd64.whl", hash = "sha256:b0ea93a096564cf09d86c6bfb28f7aecb4cb8fe0bcec42a848c96fd2c62b94ca"},
-    {file = "iminuit-2.19.0-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c325fbbffb99c9e249af79a86fa669075eed03f4194b0d41ac03c0ae1dbd6264"},
-    {file = "iminuit-2.19.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:056fc1ba7ea42139154b368c3cd81593943190cbfe3867314d45b1f5993f8b41"},
-    {file = "iminuit-2.19.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:682651c5d9971a662583fee492c1651678e0c980c88be5442f8749b1d294dc13"},
-    {file = "iminuit-2.19.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:40d3fdda747b7c172cb5565128e1dae0fac576d87ee638b05e887922ddc7c907"},
-    {file = "iminuit-2.19.0-cp311-cp311-win_amd64.whl", hash = "sha256:7ef1b34ad480aea449f7cf2e9fed90dd2bc0f8efc17268ede9198a8236fe3326"},
-    {file = "iminuit-2.19.0-cp38-cp38-macosx_10_9_universal2.whl", hash = "sha256:b9773f6fe3378138adb3d9503a8c8ea979c61dc88b4d14a2821661eb47b38b1b"},
-    {file = "iminuit-2.19.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:98084a9b00711af11555ffbae4a2d77dc2e84e00b352bfffd0d209aa4f131397"},
-    {file = "iminuit-2.19.0-cp38-cp38-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:b19109d2c9187f922603dd6cafd5ccaf419da7b3232c09f925e087a6d2d9d1a9"},
-    {file = "iminuit-2.19.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:d0136e34a1ed4462ab89e0a38389d0acf5ce390c20b0eac939c832e9c88342fb"},
-    {file = "iminuit-2.19.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4f3b2401d4ae53243c65921850d3a0576c8a15077e74cd2c92a52d6ac07adf2b"},
-    {file = "iminuit-2.19.0-cp38-cp38-win32.whl", hash = "sha256:7c5f2667656c3e5eb833ae34240d19683402b3af199b4480ed3b0589d9eff31a"},
-    {file = "iminuit-2.19.0-cp38-cp38-win_amd64.whl", hash = "sha256:50583a0c79c436daa45fadd1a9daf1acdbf1c7033e6b5909f72affaade1b0877"},
-    {file = "iminuit-2.19.0-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:0e098ef255634c766b876e43aa2883ef63b173a8752bccfa796037fd0414307c"},
-    {file = "iminuit-2.19.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:4c920ca39d23c51988a7a10451dcb5b0ac216cd2f48d4be7b54343a2e52dbfa0"},
-    {file = "iminuit-2.19.0-cp39-cp39-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:457e2f02d47f85f3dc4a69935d7384075d9e9520fa9677321ca58d70431d8671"},
-    {file = "iminuit-2.19.0-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:6cc39cab8570828ec7e4278d6c20dd3a4d6761463339850e0ead099a4e954f45"},
-    {file = "iminuit-2.19.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d113dde2b9fe9f14916583bbe2b7a784f287fade9e7d0fd96a76f0c837976a84"},
-    {file = "iminuit-2.19.0-cp39-cp39-win32.whl", hash = "sha256:bb858ebb71d0f10f600cbfdd8a16f806e22a52da81256cec86fe387054a66cae"},
-    {file = "iminuit-2.19.0-cp39-cp39-win_amd64.whl", hash = "sha256:c3de09dfcab66764971e7f0414367f7aef6e5afa60728071cfd294c8829abc4b"},
-    {file = "iminuit-2.19.0.tar.gz", hash = "sha256:f4d1cbaccf115cdc4866968f649f2a37794a5c0de018de8156aa74556350a54c"},
+    {file = "iminuit-2.20.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:6432c320acfd9f761e8f5f3c433960810ec281533dba808e7fbb689c4ed9cd15"},
+    {file = "iminuit-2.20.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c4410a9c6d8367d14f6544877b6fa04771d361422b90dae22824d8e53965dc4c"},
+    {file = "iminuit-2.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0f848736f6b1d78a597f7cbdaf3c6d222a8ed3e85b46e4abd26f4de41b2da2c7"},
+    {file = "iminuit-2.20.0-cp310-cp310-win_amd64.whl", hash = "sha256:d7afce18ea223c3f25b582752fab4c3a74cc19ed774d610c42f953ddc5f5d9f4"},
+    {file = "iminuit-2.20.0-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:2db2a5d7f59354b33f6ce15d1e23bfec744a6bf3973cc017d7e40750bd9a203f"},
+    {file = "iminuit-2.20.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:2e86a13fd9437c6d8c0e6755c125cf260605cf5d727ee76b8746bedb2dd1468a"},
+    {file = "iminuit-2.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a1f728675b2c81a5a6f0a764a75f375043ca7f1edd276bcceb294be2c147e20f"},
+    {file = "iminuit-2.20.0-cp311-cp311-win_amd64.whl", hash = "sha256:2bca7fd96326a330d2f94cebcfb567953525157001b619de7eb4be1089ba9a64"},
+    {file = "iminuit-2.20.0-cp38-cp38-macosx_10_9_universal2.whl", hash = "sha256:371ef22b0399f5863675d88c014d9407f0900dde00e4fec13c04c630f5de6d3c"},
+    {file = "iminuit-2.20.0-cp38-cp38-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:000ce41703e8ebb17ec3dcec105bba20c4a6ff961920c54b717b42acf5592b6b"},
+    {file = "iminuit-2.20.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:e3a3782335fd9d905683e129d4e35d37b014bec2e40cbd39e08591e6dee567e5"},
+    {file = "iminuit-2.20.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:00711b39f21eceb6e3cb7852eae67f394f3ccbbc59293f9d35eb8c0d18a1ddf6"},
+    {file = "iminuit-2.20.0-cp38-cp38-win32.whl", hash = "sha256:43002a30b735d2cb190c479db69ea47bca50796ed6843f1574b6716259b3ecb9"},
+    {file = "iminuit-2.20.0-cp38-cp38-win_amd64.whl", hash = "sha256:c4eeb2d21b75b255d385fc718e2de65c630856f6c2d2f19b3b5c8600ce0e40bf"},
+    {file = "iminuit-2.20.0-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:a1c3e593f4bfe3a466bd7b7ad83c030ae2092a27d68611ec935051803d4239c2"},
+    {file = "iminuit-2.20.0-cp39-cp39-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:3f3b5cda81c5770d85584fdd6443898dc850fb01f0333741d62760e43ab1f0b4"},
+    {file = "iminuit-2.20.0-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:06b0d96610027a8b137e5fdf4db12b3464427f7c83c069e3f13eafcc64b4d90d"},
+    {file = "iminuit-2.20.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9bde71a141b2d7ae8c17db7d00527ab2035771c0139d8727a054d287fe238140"},
+    {file = "iminuit-2.20.0-cp39-cp39-win32.whl", hash = "sha256:f2e952f2efbb8e91828c5efc8c86a9e4803ef6eec086b8153d80d5e10666b4f2"},
+    {file = "iminuit-2.20.0-cp39-cp39-win_amd64.whl", hash = "sha256:6906a01a7282cb68dd6157cd8aa1af53e335fb4b7f6b06e36921b4c2daf31be3"},
+    {file = "iminuit-2.20.0.tar.gz", hash = "sha256:a73fe6e02f35e3180fc01bc5c1794edf662ff1725c3bc2a4f433567799da7504"},
 ]
 
 [package.dependencies]
@@ -1679,4 +1675,4 @@ testing = ["nose"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "8454842c7575a7f57abad107425fc535c1fd9578f223a2e97f4b4c886a168bd6"
+content-hash = "04647f83d02879b2820f60d0fcfab9b49533de63e008baf18198c11e47ed5942"
