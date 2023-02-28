@@ -27,7 +27,7 @@
 * [1612.00529](https://arxiv.org/abs/1612.00529): Belle 2017
 * [1708.08856](https://arxiv.org/abs/1708.08856): LHCb 2018.
 * [1904.08794](https://arxiv.org/abs/1904.08794): Belle 2019.
-* [Seminario CERN](https://indico.cern.ch/event/1187939/): LHCb 2022 (provisional).
+* [2302.02886](https://arxiv.org/abs/2302.02886): LHCb 2022.
 
 ### RJ/psi
 
