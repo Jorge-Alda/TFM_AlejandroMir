@@ -13,7 +13,7 @@ wilson = "^2.3.2"
 ipykernel = "^6.21.2"
 h5py = "^3.8.0"
 iminuit = "^2.20.0"
-matplotlib = "^3.7.0"
+matplotlib = "^3.7.1"
 
 
 [tool.poetry.group.dev.dependencies]
