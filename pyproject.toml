@@ -10,7 +10,7 @@ packages = [{include = "tfm_alejandromir"}]
 python = "^3.10"
 flavio = "^2.3.3"
 wilson = "^2.3.2"
-ipykernel = "^6.21.2"
+ipykernel = "^6.21.3"
 h5py = "^3.8.0"
 iminuit = "^2.20.0"
 matplotlib = "^3.7.0"
