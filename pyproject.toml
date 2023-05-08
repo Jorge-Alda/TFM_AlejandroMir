@@ -8,7 +8,7 @@ packages = [{include = "tfm_alejandromir"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-flavio = "^2.3.3"
+flavio = "^2.5.4"
 wilson = "^2.3.2"
 ipykernel = "^6.22.0"
 h5py = "^3.8.0"
