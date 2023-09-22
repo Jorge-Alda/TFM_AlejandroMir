@@ -13,3 +13,4 @@
 * [Lección 3](03.ipynb): Test de hipótesis y optimización.
 * [Lección 4](04.ipynb): Medidas experimentales en `flavio`.
 * [Lección 5](05.ipynb): Grupo de renormalización y cambio de base.
+* [Lección 6](06.ipynb): Neural Networks.
