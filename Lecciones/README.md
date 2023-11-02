@@ -14,5 +14,7 @@
 * [Lección 4](04.ipynb): Medidas experimentales en `flavio`.
 * [Lección 5](05.ipynb): Grupo de renormalización y cambio de base.
 * Lección 6: Machine Learning
-    * [Lección 6a](06a.ipynb): Prelude and Pandas
+    * [Lección 6a](06a.ipynb): Prelude and Pandas.
     * [Lección 6b](06b.ipynb): Neural Networks.
+    * [Lección 6c](06c.ipynb): Boosted regression trees and interpretable models.
+    * [Lección 6d](06d.ipynb): Normalizing flows.

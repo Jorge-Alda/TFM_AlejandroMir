@@ -18,6 +18,7 @@ xgboost = "^2.0.0"
 torch = ">=2.0.0, !=2.0.1, !=2.1.0"
 graphviz = "^0.20.1"
 shap = "^0.43.0"
+normflows = "^1.7.2"
 
 
 [tool.poetry.group.dev.dependencies]

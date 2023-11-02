@@ -1073,6 +1073,24 @@ extra = ["lxml (>=4.6)", "pydot (>=1.4.2)", "pygraphviz (>=1.11)", "sympy (>=1.1
 test = ["pytest (>=7.2)", "pytest-cov (>=4.0)"]
 
 [[package]]
+name = "normflows"
+version = "1.7.2"
+description = "Pytorch implementation of normalizing flows"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "normflows-1.7.2.tar.gz", hash = "sha256:36f0dee73d53f5193b833ec65267e6193f47215fc4a15f05c09f73865792168f"},
+]
+
+[package.dependencies]
+numpy = "*"
+torch = "*"
+
+[package.extras]
+docs = ["mkdocs", "mkdocs-jupyter", "mkdocstrings[python]"]
+
+[[package]]
 name = "numba"
 version = "0.58.1"
 description = "compiling Python code using LLVM"
@@ -2458,4 +2476,4 @@ scikit-learn = ["scikit-learn"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "296d2029aa6967dea177caf71724feede50b049931a4e5b657b48b99eaa4afa1"
+content-hash = "0080856be51c04b15ae11d87e420ab169bf54d4a9d90982830b0c9ecc9d67684"
