@@ -18,3 +18,4 @@
     * [Lección 6b](06b.ipynb): Neural Networks.
     * [Lección 6c](06c.ipynb): Boosted regression trees and interpretable models.
     * [Lección 6d](06d.ipynb): Normalizing flows.
+    * [Lección 6e](06e.ipynb): Transformers.

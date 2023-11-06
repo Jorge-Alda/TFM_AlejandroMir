@@ -1,0 +1,3 @@
+[submodule "Lecciones/nougat-latex-ocr"]
+	path = Lecciones/nougat-latex-ocr
+	url = https://github.com/NormXU/nougat-latex-ocr
