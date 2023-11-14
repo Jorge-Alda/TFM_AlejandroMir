@@ -19,3 +19,4 @@
     * [Lección 6c](06c.ipynb): Boosted regression trees and interpretable models.
     * [Lección 6d](06d.ipynb): Normalizing flows.
     * [Lección 6e](06e.ipynb): Transformers.
+    * [Lección 6f](06f.ipynb): Exercise - Chasing the Higgs boson at ATLAS.
